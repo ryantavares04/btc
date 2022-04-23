@@ -68,7 +68,7 @@ class Btcbf():
     def random_online_brute(self, n):
         self.cur_n = n
         key = Key()
-        url = urllib.request.urlopen("https://blockchain.info/q/getreceivedbyaddress/"+key.address+"/")
+        url = urllib.request.urlopen("https://blockchain.info/balance"+key.address+"/")
         if int(url.read())>0:
             print(url.read())
             print("Wow active address found!!")
